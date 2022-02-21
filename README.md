@@ -1,4 +1,4 @@
-# Babel Plugin Goober CSS Prop
+# Babel Plugin Goober CSS Prop ESM
 
 Most of the code here is from [`babel-plugin-css-prop`](https://github.com/satya164/babel-plugin-css-prop) which has been customised for [`goober`](https://github.com/cristianbote/goober)
 
@@ -7,7 +7,7 @@ Most of the code here is from [`babel-plugin-css-prop`](https://github.com/satya
 
 ```bash
 # Installation
-npm install --save-dev @agney/babel-plugin-goober-css-prop
+npm install --save-dev babel-plugin-goober-css-prop-esm
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ In `.babelrc` (or any babel configuration type):
 {
   "plugins": [
     "babel-plugin-transform-goober",
-    "@agney/babel-plugin-goober-css-prop"
+    "babel-plugin-goober-css-prop-esm"
   ]
 }
 ```

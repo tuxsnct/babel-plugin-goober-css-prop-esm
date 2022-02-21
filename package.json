@@ -1,7 +1,7 @@
 {
-  "name": "@agney/babel-plugin-goober-css-prop",
+  "name": "babel-plugin-goober-css-prop-esm",
   "version": "0.0.1",
-  "description": "Babel plugin that enables CSS prop for Goober",
+  "description": "Babel plugin that enables CSS prop for Goober and ESM (e.g. Vite)",
   "main": "index.js",
   "private": false,
   "scripts": {
@@ -16,7 +16,11 @@
   "peerDependencies": {
     "goober": ">= 2"
   },
-  "author": "Agney <agney@outlook.in>",
+  "author": {
+    "name": "Hideki Tanaka",
+    "email": "work@tuxsnct.com",
+    "url": "https://www.tuxsnct.com"
+  },
   "license": "MIT",
   "dependencies": {
     "@babel/helper-module-imports": "^7.12.5",
@@ -24,10 +28,13 @@
   },
   "devDependencies": {
     "goober": "^2.0.19-next.1",
-    "np": "^7.0.0"
+    "np": "^5.1.3"
   },
-  "repository": "git@github.com:agneym/babel-plugin-goober-css-prop.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuxsnct/babel-plugin-goober-css-prop-esm.git"
+  },
   "bugs": {
-    "url": "https://github.com/agneym/babel-plugin-goober-css-prop.git/issues"
+    "url": "https://github.com/tuxsnct/babel-plugin-goober-css-prop-esm.git/issues"
   }
 }

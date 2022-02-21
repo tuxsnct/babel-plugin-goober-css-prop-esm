@@ -13,7 +13,7 @@ module.exports = function (
     visitor: {
       Program: {
         enter(path, state) {
-          // Whether we've inserted the require statement
+          // Whether we've inserted the import statement
           state.required = false;
           // Nodes to insert
           state.items = [];
@@ -35,21 +35,14 @@ module.exports = function (
         const { bindings } = path.findParent((p) => p.type === "Program").scope;
 
         if (!state.required) {
-          // If we haven't inserted a require statement, now is the time
+          // If we haven't inserted a import statement, now is the time
           if (!bindings.styled) {
-            // The binding doesn't exist, we need to insert the require
+            // The binding doesn't exist, we need to insert the import
             state.items.push(
-              t.variableDeclaration("var", [
-                t.variableDeclarator(
-                  t.identifier("styled"),
-                  t.memberExpression(
-                    t.callExpression(t.identifier("require"), [
-                      t.stringLiteral("goober"),
-                    ]),
-                    t.identifier("styled")
-                  )
-                ),
-              ])
+              t.importDeclaration(
+                [t.importSpecifier(t.identifier('styled'), t.identifier('styled'))],
+                t.stringLiteral("goober")
+              )
             );
           }
 
